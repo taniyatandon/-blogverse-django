@@ -1,2 +1,0 @@
-https://blogversee.up.railway.app/     -------Django Project
-https://blog-verse.up.railway.app/     -------Flask Project
