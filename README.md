@@ -1,81 +1,93 @@
-﻿# Blogverse Django Project
+```markdown
+# Blogverse — Django Blog Platform
 
-A full-featured Django blog application with custom user authentication, blog creation, editing, search, profiles, and image uploads.
+A full-featured blog platform built with Django, supporting user authentication, rich blog creation, profile management, and image uploads.
+
+
+<img width="1919" height="864" alt="image" src="https://github.com/user-attachments/assets/039817f5-e612-4a39-a7c6-ed3777c8f6ed" />
+
+---
 
 ## Features
 
-- Custom `AppUser` model for authentication
-- User signup, login, logout, and profile management
-- Write, edit, and delete blog posts
-- Search posts and like posts
-- Image upload support with `Pillow`
-- Static templates and responsive UI powered by Django templates
-- Ready for local development and deployment
+- Custom `AppUser` model with full authentication (signup, login, logout)
+- Create, edit, delete, and search blog posts
+- Like posts and manage your profile
+- Image upload support via `Pillow`
+- User profile pages with avatar and bio
+- Responsive UI with Django templates
+- Railway-ready deployment configuration
+
+---
 
 ## Repository Structure
 
-- `blogverse_project/`
-  - `Myblogproject/` — Django project configuration
-  - `blogverse/` — main Django app containing models, views, templates, and static files
-  - `requirements.txt` — required Python packages for this app
-- `.gitignore` — ignores virtual environments, database file, media, and editor artifacts
+```
+BLOGVERSE_DJANGO/
+├── blogverse_project/
+│   ├── Myblogproject/        # Django project config (settings, urls, wsgi)
+│   ├── blogverse/            # Main app (models, views, templates, static)
+│   │   ├── migrations/
+│   │   ├── static/
+│   │   ├── templates/
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   ├── urls.py
+│   │   └── forms.py
+│   ├── manage.py
+│   └── requirements.txt
+├── .gitignore
+└── README.md
+```
+
+---
 
 ## Requirements
 
-Install using the provided requirements file:
+- Python 3.12+
+- Django 5.1.7
+- Pillow 11.1.0
 
-```powershell
-cd blogverse_project
-pip install -r requirements.txt
-```
-
-Current dependencies:
-
-- `Django==5.1.7`
-- `Pillow==11.1.0`
+---
 
 ## Setup and Run Locally
 
-1. Create and activate a virtual environment:
+### 1. Clone the repository
+```bash
+git clone https://github.com/taniyatandon/-blogverse-django.git
+cd BLOGVERSE_DJANGO
+```
 
+### 2. Create and activate virtual environment
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
-2. Install dependencies:
-
+### 3. Install dependencies
 ```powershell
 cd blogverse_project
 pip install -r requirements.txt
 ```
 
-3. Apply database migrations:
-
+### 4. Apply migrations
 ```powershell
 python manage.py migrate
 ```
 
-4. Create a superuser (optional):
-
+### 5. Create a superuser (optional)
 ```powershell
 python manage.py createsuperuser
 ```
 
-5. Start the development server:
-
+### 6. Run the development server
 ```powershell
 python manage.py runserver
 ```
 
-6. Open the app in your browser at `http://127.0.0.1:8000/`
+Visit http://127.0.0.1:8000/
 
-## Notes
+## Author
 
-- Do not commit the `.venv/`, `db.sqlite3`, or `media/` directories.
-- The project uses SQLite for local development.
-- Keep `DEBUG = True` only for local development and disable it before production.
-
-## Deployment
-
-This project is already configured with `ALLOWED_HOSTS` and `CSRF_TRUSTED_ORIGINS` for deployment to Railway. For production, use environment variables for `SECRET_KEY` and set `DEBUG = False`.
+Made by [Taniya Tandon](https://github.com/taniyatandon)
+```
