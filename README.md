@@ -2,9 +2,6 @@
 # Blogverse — Django Blog Platform
 
 A full-featured blog platform built with Django, supporting user authentication, rich blog creation, profile management, and image uploads.
-
-
-![Home Page](https://github.com/user-attachments/assets/1f0cc4ee-894e-4ab1-b771-9fa04c3e9e49)
 ---
 
 ## Features
