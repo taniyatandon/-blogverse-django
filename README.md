@@ -86,4 +86,3 @@ Visit http://127.0.0.1:8000/
 ## Author
 
 Made by [Taniya Tandon](https://github.com/taniyatandon)
-```
